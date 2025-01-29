@@ -13,12 +13,13 @@ NC='\033[0m' # No Color
 # FUNCTION: Find Surrounding Wi-Fi Devices & Signal Strength
 ###############################################################################
 
+echo " [!][!] CHANGE WIRELESS CARD DIRECTLY IN CODE [!] [!] --- ASSUMED 'wlan1' """
 
 findSurroundingDevicesAndDistance() {
     # Capture and process the raw data
     local raw_data
     raw_data=$(
-        sudo iw dev wlx0013eff5483f scan \
+        sudo iw dev wlan1 scan \
         | egrep "signal:|SSID:" \
         | sed -e "s/\tsignal: //" -e "s/\tSSID: //" \
         | awk '{ORS = (NR % 2 == 0)? "\n" : " "; print}' \

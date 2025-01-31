@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Log file locations
-LOG_FILE="/var/log/bluetooth_devices.log"
-KNOWN_DEVICES_FILE="/tmp/known_bluetooth_devices.txt"
-NEW_TXT_FILE="/var/log/bluetooth_device_info.txt"
-NEW_CSV_FILE="/var/log/bluetooth_device_ping.csv"
+LOG_FILE="./bluetooth_devices.log"
+KNOWN_DEVICES_FILE="./known_bluetooth_devices.txt"
+NEW_TXT_FILE="./log/bluetooth_device_info.txt"
+NEW_CSV_FILE="./log/bluetooth_device_ping.csv"
 
 # Ensure necessary files exist
 touch "$LOG_FILE" "$KNOWN_DEVICES_FILE" "$NEW_TXT_FILE" "$NEW_CSV_FILE"
